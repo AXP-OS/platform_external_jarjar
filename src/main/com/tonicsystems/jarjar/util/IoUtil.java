@@ -114,6 +114,7 @@ class IoUtil {
                 else
                 {
                     final ZipEntry outputEntry = new ZipEntry(inputEntry);
+outputEntry.setCompressedSize(-1);
                     outputStream.putNextEntry(outputEntry);
                     ByteArrayOutputStream baos = new ByteArrayOutputStream();
                     final InputStream is = inputZip.getInputStream(inputEntry);
